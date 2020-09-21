@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="48"/>
+	<property name="ireport.y" value="140"/>
+	<parameter name="jui_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SP_REPORTE_KARDE_JUICIO $P{jui_id}]]>
+	</queryString>
+	<field name="FECHA" class="java.lang.String"/>
+	<field name="ENTREGO" class="java.lang.String"/>
+	<field name="RECIBIO" class="java.lang.String"/>
+	<field name="TIPO" class="java.lang.String"/>
+	<field name="UBICACION" class="java.lang.String"/>
+	<field name="PROPOSITO" class="java.lang.String"/>
+	<field name="jui_id" class="java.lang.String"/>
+	<field name="jui_ubicacion" class="java.lang.String"/>
+	<field name="jui_actor" class="java.lang.String"/>
+	<field name="jui_demandado" class="java.lang.String"/>
+	<field name="SECRETARIO" class="java.lang.String"/>
+	<field name="JUEZ" class="java.lang.String"/>
+	<field name="inicial" class="java.lang.String"/>
+	<field name="jui_fechaingreso" class="java.sql.Timestamp"/>
+	<field name="jui_naturaleza" class="java.lang.String"/>
+	<field name="jui_cuerpos" class="java.lang.Integer"/>
+	<field name="jui_fojas" class="java.lang.Integer"/>
+	<field name="USUARIO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="34" width="555" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPLEJO JUDICIAL OTAVALO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="555" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONSEJO DE LA JUDICATURA DE IMBABURA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="56" width="553" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="150" splitType="Stretch">
+			<textField>
+				<reportElement x="24" y="15" width="82" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="14" width="138" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_ubicacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="106" width="231" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SECRETARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="133" width="241" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JUEZ}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="14" width="206" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_naturaleza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="14" width="34" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_cuerpos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="14" width="26" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_fojas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="135" width="61" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_fechaingreso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="41" width="231" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_actor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="74" width="231" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jui_demandado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="2" width="79" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[JUICIO N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="3" width="34" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Cuerpos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="3" width="34" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Fojas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="3" width="138" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Ubicación en archivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="0" width="138" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Naturaleza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="30" width="138" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Actor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="62" width="138" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Demandado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="94" width="138" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Secretario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="121" width="138" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Juez]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="268" y="122" width="27" height="26"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inicial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="50" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="1" width="112" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENTREGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="0" width="101" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RECIBIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="120" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROPOSITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="1" width="51" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[USUARIO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="295" y="0" width="29" height="15"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MOV.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="112" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ENTREGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="0" width="112" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RECIBIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="0" width="134" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROPOSITO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="51" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{USUARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="19" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIPO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="23" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="523" y="23" width="22" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
